@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Garage_99{% endblock %}</title>
+    
+    <!-- Load static files -->
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'css/home1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'css/whatsapp.css' %}">
+
+
+    <script src="{% static 'js/quote.js' %}"></script>
+    <script src="{% static 'js/car.js' %}"></script>
+    <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/service.js' %}"></script>
+
+
+
+    
+</head>
+<body>
+    <header>
+        <!-- Navbar for home start -->
+        <div class="logo-container">
+            <img src="{% static 'images/Logo 2.png' %}" alt="Logo 2" class="logo_2">
+        </div>
+        <nav class="navigation">
+            <a href="#home" data-scroll class="{% if active_nav == 'home' %}active{% endif %}">Home</a>
+            <a href="#about" data-scroll aria-label="Navigate to About Section">About</a>
+            <a href="#gallery" data-scroll aria-label="Navigate to Gallery Section">Gallery</a>
+            <a href="#contact" data-scroll class="{% if active_nav == 'contact' %}active{% endif %}">Contact</a>
+            <a href="{% url 'register' %}" class="{% if active_nav == 'register' %}active{% endif %}">Register</a>
+        </nav>
+    </header>
+
+
+    <!-- Slider section with car image and quotes -->
+    <div class="slider" id="home">
+        <div class="slide first">
+            <div class="quote-container">
+                <p class="quote-text">
+                    <span class="highlight">SHINE</span> 
+                    <span class="changing-part">like new, drive with pride.</span>
+                </p>
+            </div>
+            <img src="{% static 'images/mustang.png' %}" alt="Background Image">
+        </div>
+    </div>
+
+ <!-- About section -->
+<section id="about" class="about-section">
+    <div class="about-intro">
+        <div class="heading-logo">
+
+            <img src="{% static 'images/Logo 2.png' %}" alt="Logo" class="logo_about">
+        </div>
+    </div>
+
+    <!-- About content container -->
+    <div class="about-content">
+        <div class="services">
+            <h1>Our Services :</h1>
+            <ul id="services-list">
+                <li data-image="{% static 'images/bg2.png' %}" data-description="A comprehensive exterior wash...A comprehensive exterior wash that removes dirt, grime, and contaminants from the car’s surface.
+                Ensures a clean, fresh look and adds a layer of protection against pollutants.
+                Includes hand wash, drying, and detailing for a streak-free finish.">Full Body Washing</li>
+                <li data-image="{% static 'images/bg3.png' %}" data-description="A thorough interior service...   A thorough interior service focusing on deep cleaning and sanitization of seats, carpets, and upholstery.
+                Vacuuming, stain removal, and deodorizing ensure a fresh and hygienic interior environment.
+                Also includes cleaning of dashboard, door panels, and windows for a complete refresh.">Interior Cleaning</li>
+                <li data-image="{% static 'images/bg4.png' %}" data-description="Rubbing and polishing to remove scratches...    Rubbing and polishing to remove minor scratches and restore the paint's gloss and clarity.
+                Helps to bring back the car’s original shine by eliminating surface imperfections.
+                Includes a two-step process: rubbing compound for scratch removal and polish for a glossy finish.
+                ">Rubbing and Polishing</li>
+                <li data-image="{% static 'images/bg1.png' %}" data-description="High-tech protective ceramic coating...    High-tech protective ceramic coating applied to shield the paint from scratches, UV rays, and weather.
+                Adds a layer of gloss and extends the life of the paint, making it easier to maintain.
+                Provides a hydrophobic effect, repelling water and dirt, and keeping the car cleaner for longer">Ceramic Coating</li>
+            </ul>            
+        </div>
+        
+        <!-- Photo Gallery with description container -->
+        <div class="photos-gallery">
+            <div class="photo-box">
+                <img class="filter-image" src="{% static 'images/logo1.png' %}" alt="Detailing Image">
+            </div>
+            <div class="service-description">
+                <h2 id="service-title"></h2>
+                <p id="service-description"></p>
+            </div>
+        </div>
+        
+</section>
+
+<div class="gallery_sildes" id="gallery">
+    <h1>Life in G99</h1>
+    <div class="container">
+        <img class="filter-image" src="{% static 'images/2022-12-16.jpg' %}" alt="1">
+        <img class="filter-image" src="{% static 'images/2023-09-26.jpg' %}" alt="2">
+        <img class="filter-image" src="{% static 'images/2024-07-22.jpg' %}"alt="4">
+        <img class="filter-image" src="{% static 'images/2023-01-19 (1).jpg' %}" alt="3">
+        <img class="filter-image" src="{% static 'images/bg7.jpg' %}"alt="Lemur">
+        <img class="filter-image" src="{% static 'images/bg6.jpg' %}"alt="Berber Monkeys">
+    </div>
+</div>
+</section>
+
+
+    <!-- Contact section -->
+    <section id="contact" class="contact-section">
+        <h1>Contact Us</h1>
+        <p>If you would like to get in touch, please send us a message!</p>
+    </section>
+
+    <!-- Include the external JavaScript file for scrolling -->
+    <div class="whatsapp-float">
+        <a 
+            href="https://wa.me/919500795790?text=Hello%2C%20I%20have%20an%20enquiry%20about%20your%20services.%0A%0A1.%20What%20are%20the%20pricing%20options%20available%3F%0A2.%20How%20long%20does%20each%20service%20take%3F%0A3.%20Do%20you%20offer%20any%20discounts%20for%20regular%20customers%3F" 
+            target="_blank">
+            <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp">
+        </a>
+    </div>
+    
+</body>
+
+<script>
+    // Add event listener for scroll
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header'); // Select the header
+        if (window.scrollY > 50) { // Check if scroll position is greater than 50px
+            header.classList.add('scrolled'); // Add the scrolled class
+        } else {
+            header.classList.remove('scrolled'); // Remove the scrolled class
+        }
+    });
+
+    function toggleNavigation() {
+    const nav = document.querySelector('.navigation');
+    nav.classList.toggle('active');
+}
+
+</script>
+
+</html>

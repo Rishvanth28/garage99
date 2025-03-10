@@ -1,0 +1,505 @@
+@import url(https://fonts.bunny.net/css?family=amita:700);
+
+body {
+    background: rgb(23,23,23);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 80%, rgba(3,35,1,1) 88%, #0db107 100%);
+}
+@media (max-width: 768px) {
+    .quote-container {
+        font-size: 1.5em;
+        width: 80%;
+    }
+    .navigation a {
+        font-size: 1em;
+        padding: 8px 10px;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 95%;
+}
+
+
+header {
+    position: fixed; /* Keep it fixed at the top */
+    top: 0px; 
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Center the nav bar */
+    align-items: center;
+    z-index: 100;
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.contact-section {
+    background-color: #e2e2e2;
+}
+/* Add this CSS to define the scrolled header background */
+header.scrolled {
+    background-color: rgba(0, 128, 0, 0.7); /* Dark green with transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+}
+
+/* Default styles for navigation links */
+.navigation a {
+    font-family: Amita;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF9D5; /* Light color */
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Initial hover effect is disabled */
+.navigation a:hover {
+    background: none;
+    color: inherit;
+}
+
+/* Active state */
+.navigation a.active {
+    background: #0a641c; /* Dark green for active state */
+    color: #FFF9D5; /* Light color */
+    font-weight: bolder;
+    border: 2px solid #68bd52; /* Highlight border for active state */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for focus */
+}
+
+/* Hover effect when navbar is scrolled */
+header.scrolled .navigation a:hover {
+    background: #68bd52; /* Dark green */
+    color: #FFF9D5; /* Light color on hover */
+    transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Logo styles */
+.logo_1 {
+    position: absolute;
+    top: 50px; /* Adjust the top position to move the logo upwards */
+    left: 28px; /* Keep the left position as is */
+    width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Optional margin */
+}
+.logo_2 {
+    position: absolute;
+    top: -25px; /* Adjust the top position to move the logo upwards */
+    left: 28px; /* Keep the left position as is */
+    width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Optional margin */
+}
+/* Quote container styling */
+.quote-container {
+    position: absolute;
+    top: 80%; /* Move to the middle of the image */
+    left: 5%; /* Position it on the left side */
+    width: 40%; /* Adjust width to fit longer text */
+    transform: translateY(-50%); /* Center vertically using transform */
+    color: #FFF9D5;
+    font-family:Amita;
+    font-size: 2.8em;
+    text-transform: uppercase; /* Make all text uppercase */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for readability */
+    display: flex;
+    gap: 10px;
+}
+
+/* Styling for the constant word "SHINE" */
+.highlight {
+    color: #F2AA4CFF; /* Light brown color for highlight */
+}
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px; /* Reduce padding for small screens */
+        justify-content: center; /* Center elements */
+        flex-direction: column; /* Stack logo and navigation vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: left; /* Center the logo horizontally */
+        width: 100%; /* Take full width */
+    }
+
+    .logo_2 {
+        width: 100px; /* Adjust logo size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        margin: 6px ; /* Center the logo */
+        display: block;
+    }
+
+    .navigation {
+        padding: 15px;
+        display: flex;
+        flex-direction: row; /* Keep links horizontal */
+        justify-content: center; /* Center the links */
+        align-items: center; /* Align the links */
+        margin-top: 28px; /* Space between logo and navigation */
+        width: 50%; /* Full width */
+    }
+
+    .navigation a {
+        font-size: 1em;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+        width: auto; /* Auto width to keep them inline */
+        border-radius: 0;
+    }
+
+    .navigation a:hover {
+        background-color: rgba(0, 128, 0, 0.9);
+        transform: none;
+    }
+
+    .navigation a.active {
+        background-color: rgba(0, 128, 0, 0.9);
+        border: none;
+        box-shadow: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Scrolled Header */
+header.scrolled {
+    background-color: rgba(0, 128, 0, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 8px 15px;
+    height: 60px; /* Reduce height */
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Add this CSS to define the scrolled header background */
+header.scrolled {
+    background-color: rgba(0, 128, 0, 0.7); /* Dark green with transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+    padding: 8px 15px; /* Reduce padding to decrease height */
+    height: 80px; /* Set a smaller height */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Animation for changing part fade-in */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.changing-part {
+    animation: fadeInUp 1.5s ease-in-out;
+    opacity: 0; /* Hidden by default */
+}
+
+/* Style for alternating visibility of the changing part */
+.changing-part.visible {
+    opacity: 1;
+}
+
+
+/* Set the slider to a relative position for the parallax effect */
+.slider {
+    width: 80%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adjust the image to start lower on the screen */
+.slide.first img {
+    width: auto;
+    height: 30%;
+    position: absolute;
+    top: 50%; /* Start the image from halfway down the screen */
+    left: 50%;
+    right:0; /* Keep the image on the right */
+    transform: translateY(0%); /* Ensure it starts centered vertically */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Ensure the slide starts fully visible */
+.parallax .slide {
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* Smooth fade */
+}
+
+.parallax .slide.active {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+/* Style for new sections */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Specific styles for each section */
+.about-section {
+    background-color:transparent;
+}
+
+.projects-section {
+    background-color: #fff;
+}
+
+
+
+/* Style the slide and image */
+.slider {
+    width: 110%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide.first img {
+    width: auto;
+    height: 83%;
+    position:absolute;
+    top: 0;
+    right: 0; /* Image starts on the right */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Add space for scrolling */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.project-item {
+    width: 45%;
+    background-color: #427435;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+} 
+
+
+/* About section styling */
+.about-section {
+    background:black;
+        padding: 50px 0; /* Added padding for spacing */
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 90px; /* Add spacing between columns */
+    }
+    
+    .services, .photos-gallery {
+        width: 45%; /* Make both sections take up equal width */
+    }
+    
+    /* Additional styling for responsive layout */
+    @media (max-width: 768px) {
+        .about-section {
+            flex-direction: column;
+            align-items: center;
+        }
+        .services, .photos-gallery {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+/* Intro heading styling */
+.about-intro h1 {
+    text-align: center;
+    font-family: Amita;
+    font-size: 2.5em;
+    color: #F2AA4CFF;
+    margin-bottom: 30px;
+}
+/* Styling for heading and logo in About section */
+.heading-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between heading and logo */
+}
+
+.heading-logo h1 {
+    font-family: Amita;
+    font-size: 3em;
+    color: #F2AA4CFF;
+    margin: 0; /* Remove default margin */
+}
+
+.logo_about {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Content layout */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Styling for services list */
+.services ul {
+    font-family: Amita;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 0; /* Remove default padding */
+    color: #F2AA4CFF;;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Shadow for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px; /* Space between list items */
+}
+/* Align services list to the left side */
+#services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Add space from the left edge */
+}
+
+#services-container h3 {
+    font-family: Amita;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#services-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Service items style */
+#services-list {
+    padding-left: 0; /* Remove default padding from the list */
+    list-style-type: none; /* Remove bullets from the list */
+    margin: 10px; /* Remove default margin */
+}
+
+/* Individual service item styles */
+#services-list li {
+    font-family: Amita;
+    font-size: 1.2em;
+    color: black;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.5px #ffffff99;
+    text-transform: uppercase;
+    transition: color 0.4s ease, -webkit-text-stroke 0.4s ease;
+    display: block;
+}
+
+/* Hover effect */
+#services-list li:hover {
+    color: #40e20e;
+    -webkit-text-stroke: 0;
+}
+
+/* Active (clicked) state */
+#services-list li.active {
+    color: #ffffff;
+    -webkit-text-stroke: 0;
+}
+
+/* Animation for letter-by-letter fill on hover */
+#services-list li:hover {
+    animation: fillText 0.5s forwards;
+}
+
+/* Define the fill animation */
+@keyframes fillText {
+    50% { color: black; }
+    80% { color: #FFF9D5; }
+}
+.services h3{
+    font-family: Amita;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: -260px;
+
+
+}
+
+
+
+/* Styling for photo boxes */
+.photo-box {
+    margin: 0;
+    overflow: hidden;
+    box-shadow: none; /* Removed shadow if not needed */
+}
+
+.photo-box img {
+    width: 40%; /* Make image fill the container */
+    height: auto;
+    border-radius: 20px; /* Curve the edges of images */
+    transition: transform 0.5s ease;
+}
+
+.photo-box img:hover {
+    transform: scale(1.05);
+}
+
+.service-description {
+    margin-top: 20px;
+    color: #FFF9D5; /* Same color as the other text */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    font-size: 1.3em;
+
+}
+
+#service-title {
+    font-family: Amita;
+
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #427435;
+}
+
+#service-text {
+    font-size: 1.3em;
+}
+
+.contact-section {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 13%, rgba(4,61,2,1) 46%, rgba(13,177,7,1) 89%);
+}

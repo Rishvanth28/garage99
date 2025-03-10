@@ -1,0 +1,58 @@
+@import url(https://fonts.bunny.net/css?family=amita:700);
+
+.gallery_slide {
+    background: url(https://res.cloudinary.com/ritalbradley/image/upload/v1657644013/pexels-elijah-o_donnell-3473569_o7ohfd.jpg)
+        center center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #fefae0;
+    font-family: Amita;
+    margin: 20px auto;
+    width: 450px;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 10px double #427435;
+}
+
+img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    transition-duration: 1s;
+    border-radius: 20px; /* Curve the edges of images */
+
+}
+
+/* Only apply filter to the gallery images */
+.filter-image {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+
+    
+
+}
+
+.filter-image:hover {
+    transform: scale(1.1);
+
+}
+
+.filter-image:hover {
+    border: 5px ;
+    transform: scale(1.1);
+    -webkit-filter: none; /* Remove filter on hover */
+    filter: none; /* Remove filter on hover */
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
