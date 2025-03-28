@@ -49,11 +49,16 @@ header.scrolled {
     background-color: rgba(0, 128, 0, 0.7); /* Dark green with transparency */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
 }
+@import url('https://fonts.googleapis.com/css2?family=Auge&display=swap');
+
+.navigation a {
+    font-family: 'Auge';
+}
 
 /* Default styles for navigation links */
 .navigation a {
-    font-family: Amita;
-    font-weight: bold;
+    
+    font-weight: "boldonse";
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
