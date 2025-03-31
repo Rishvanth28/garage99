@@ -107,11 +107,7 @@
 </section>
 
 
-    <!-- Contact section -->
-    <section id="contact" class="contact-section">
-        <h1>Contact Us</h1>
-        <p>If you would like to get in touch, please send us a message!</p>
-    </section>
+
 
     <!-- Include the external JavaScript file for scrolling -->
     <div class="whatsapp-float">
@@ -124,7 +120,76 @@
     
 </body>
 
+
+<!-- Footer Section -->
+<footer id="contact" class="footer-section">
+    <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <img src="{% static 'images/Logo 2.png' %}" alt="Garage_99 Logo" class="footer-logo-img">
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h2>Contact Us</h2>
+            <div class="location-info">
+                <div class="address">
+                    <h3>Our Location</h3>
+                    <p><i class="location-icon"></i> 123 Auto Street, Chennai, Tamil Nadu 600001</p>
+                </div>
+                <div class="contact-details">
+                    <p><i class="phone-icon"></i> +91 9500795790</p>
+                    <p><i class="email-icon"></i> info@garage99.in</p>
+                </div>
+                <div class="hours">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://facebook.com/" target="_blank" class="social-icon facebook" aria-label="Facebook">
+                    <img src="{% static 'images/facebook.png' %}" alt="Facebook">
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                    <img src="{% static 'images/instagram.png' %}" alt="Instagram">
+                </a>
+                <a href="https://youtube.com/" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                    <img src="{% static 'images/youtube.png' %}" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Copyright Section -->
+    <div class="copyright">
+        <p>&copy; 2025 Garage_99. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
 <script>
+
+
+
+
+
+
+
+
     // Add event listener for scroll
     window.addEventListener('scroll', function () {
         const header = document.querySelector('header'); // Select the header
